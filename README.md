@@ -19,15 +19,13 @@ This is a simple text editor application that allows users to change the font fa
  - **Resetting State:** Click the "Reset" button to clear the text and reset the font settings to default.
  - **Page Reload:** Reload the page to see the saved state persist with the last entered text and selected font settings.
 
-## Implementation Details:
-
 ## TextEditor Component
- -**State Management:** The component uses useState to manage the text, font family, font weight, and italic style.
- -**Local Storage:** useEffect is used to load the saved state from local storage on initial render and save the state to local storage whenever it changes.
- -**Font Loading:** The loadFont utility function is used to dynamically load the selected font.
- -**State Sanitization:** The sanitizeEditorState function ensures the loaded state is valid and falls back to default values if necessary.
- -**Closest Font Variant:** The getClosestFontVariant function determines the closest available font variant when a selected variant is not available.
+  - **State Management:** The component uses useState to manage the text, font family, font weight, and italic style.
+  - **Local Storage:** useEffect is used to load the saved state from local storage on initial render and save the state to local storage whenever it changes.
+  - **Font Loading:** The loadFont utility function is used to dynamically load the selected font.
+  - **State Sanitization:** The sanitizeEditorState function ensures the loaded state is valid and falls back to default values if necessary.
+  - **Closest Font Variant:** The getClosestFontVariant function determines the closest available font variant when a selected variant is not available.
 
 ## Additional Functionalities
-**Save Function:** Saves the current state to local storage and displays an alert.
-**Reset Function:** Resets the editor to the default state and removes the saved state from local storage.
+   - **Save Function:** Saves the current state to local storage and displays an alert.
+   - **Reset Function:** Resets the editor to the default state and removes the saved state from local storage.
